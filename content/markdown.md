@@ -62,3 +62,179 @@ Horizontal Lines:
 
     Preformatted text
 
+## Inline formatting
+
+*Italics*
+
+_Italics_
+
+__Bold__
+
+__*Bold+Italics*__
+
+**_Bold+Italics_**
+
+this_is_not_emphasis
+
+~~Strike-through~~
+
+Content with a -- (dash) and a --- (long dash).
+
+[link](http://link/path/to/target)
+
+[link](http://link/path/to/target "TITLE ON LINK")
+
+[Shared links with footnotes][target 1]
+
+[Second shared link][target 1]
+
+[target 1]
+
+[target 1]: http://footnote.com
+
+Sample inline code `a++` can be specified here.
+
+![Alt Text](/path/to/image "Optional Tooltip")
+
+
+## HTML escaped characters and inline HTML
+
+Copyright: &copy;
+
+Registered: &reg;
+
+Trademark: &trade;
+
+Less Than: &lt;
+
+Greater Than: &gt;
+
+Ampersand: &gt;
+
+Smiley: &#x1F604;
+
+Embedded HTML: x<sup>2</sup>
+
+Floating image via HTML: <img src="/image/logo.png" style="float: right; padding: 0 0 0 10px"> Follow up text after the image. This honors the floats and wraps around the image, automatically going into the next line.
+
+## Tables, code blocks and task lists
+
+   Name | Job
+--------|------
+   Alex | Web Developer
+    Bob | Sys Admin
+   Gabby| Technical Writer
+
+
+### Alternate table
+
+
+|  Name | Mantra |
+|  ---  | --- |
+| Alex  | There must be a better way. |
+| Bob   | Play it safe. |
+| Gabby | Try everything, but do what you like. |
+
+### Table alignment
+
+| Index |  Product | Edges |
+| --:   |  :--  | :-: |
+| 1.  | Circle  | 0 |
+| 2.  | Line   | 1 |
+| 3.  | Square | 4 |
+
+## Acme website task list
+
+- [x] Get the home page up
+- [x] Update Privacy Policy and Terms of Use
+- [ ] Add the about page
+- [ ] Start the blog
+- [ ] Enable contact us
+
+## Code block
+
+```javascript
+var x= 10;
+x++;
+console.log(x);
+```
+
+With highlighting:
+
+```javascript {linenos=true,hl_lines=[2,"4-6"],linenostart=199}
+while (!success) {
+  tryAgain();
+  attempt++;
+  if (Dead) {
+    break;
+  }
+}
+```
+
+## Direct Emojis
+Smile please :smile:
+
+I :heart: Hugo
+
+Wink :wink:
+
+A link to [Emojis](#direct-emojis)
+
+## Smart conversion
+
+This will convert to a dash --
+
+This is followed by ellipses ...
+
+## This is extra highlighted{style="background: yellow"}
+
+
+## Definition Lists
+
+Alex
+: Hippy Web Developer
+: Technophile
+
+Bob
+: Classic SysAdmin
+: Conservative
+
+Gabby
+: Cool Content Master
+: Cautious
+
+## Shortcodes
+
+*Youtube*
+{{< youtube nLAVanlu5js >}}
+
+
+*Highlight*
+{{< highlight js "linenos=table,hl_lines=3-4,linenostart=1080" >}}
+// Enjoy your work
+if (!tired()) {
+    keepCoding();
+} else {
+    drinkCoffee();
+}
+{{</ highlight >}}
+
+{{< highlight html "linenos=table,hl_lines=2 ,linenostart=1080" >}}
+<!-- Generated Youtube source code for video -->
+{{</* youtube nLAVanlu5js */>}}
+<!-- Output -->
+{{< youtube nLAVanlu5js >}}
+{{</ highlight >}}
+
+
+## Inline shortcodes.
+
+### Inline Shortcode declaration and first use
+{{% reuse.inline %}}A programmer's wife sends him to the grocery with instructions: **Get a loaf of bread and if they have eggs, get a dozen**. He came back with a dozen loafs of bread: **They had eggs.**
+{{% /reuse.inline %}}
+
+### Shortcode usage as HTML
+{{< reuse.inline />}}
+
+### Shortcode usage as Markup
+{{% reuse.inline /%}}
