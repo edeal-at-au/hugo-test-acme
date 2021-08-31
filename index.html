@@ -14,6 +14,7 @@
 <link rel=icon type=image/png href=https://edeal-at-au.github.io/hugo-test-acme/image/favicon_hue010d4fad590a87d325b7e07b2e61f59_2460_1e463977f25e99f95ee0709bc3be812b.png>
 <link rel=stylesheet type=text/css href=https://edeal-at-au.github.io/hugo-test-acme/index.min.css>
 <title>Acme Corporation</title>
+<script type=text/javascript src=/hugo-test-acme/index.js defer></script>
 </head>
 <body class=home>
 <header>
@@ -21,6 +22,21 @@
 <img src=https://edeal-at-au.github.io/hugo-test-acme/logo.svg alt="Acme Logo" height=36 width=48>
 Acme Corporation
 </a>
+<span id=search>
+<input type=search placeholder=Search>
+<div></div>
+</span>
+<span id=cart>
+<button>
+Cart
+<div class=badge></div>
+</button>
+<div>
+<div class=empty>
+Please add some items to the cart.
+</div>
+</div>
+</span>
 <nav>
 <button class=hamburger>&#9776;</button>
 <ul>
@@ -35,6 +51,12 @@ Acme Corporation
 </li>
 <li>
 <a href=/hugo-test-acme/news/>News</a>
+</li>
+<li>
+<a href=/hugo-test-acme/editor/>Editor</a>
+</li>
+<li>
+<a href=/hugo-test-acme/store/>Store</a>
 </li>
 <li>
 <a href=/hugo-test-acme/contact>Contact</a>
@@ -57,10 +79,10 @@ Acme Corporation
 <a href=/hugo-test-acme/categories/>Categories</a>
 </li>
 <li>
-<a href=/hugo-test-acme/terms/>Terms of use</a>
+<a href=/hugo-test-acme/terms>Terms of use</a>
 </li>
 <li>
-<a href=/hugo-test-acme/privacy/>Privacy policy</a>
+<a href=/hugo-test-acme/privacy>Privacy policy</a>
 </li>
 <li>
 <a href=/hugo-test-acme/credits/>Credits</a>
@@ -71,56 +93,130 @@ Acme Corporation
 </section>
 <section id=store>
 <h1>Our Products</h1>
-<ul>
-<li>
-<a href=#>
-<img src=https://edeal-at-au.github.io/hugo-test-acme/image/products/Circle_hu682f43a3b26b83c84853e3a566d1de9a_156815_09cab4a9cc8decf56cfcff6b38f8d618.png alt=Circle>
+<ul class=products>
+<li class=product>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/store/circle/>
+<img loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/store/circle/cover_hu682f43a3b26b83c84853e3a566d1de9a_156815_b0db9283819b69c0e909eb0b6a4d31a4.png alt=Circle>
 <h2>Circle</h2>
 <div class=price>$ 2 </div>
 <div class=rating>
 &starf;&starf;&starf;&starf;&star;
 </div>
 </a>
+<form>
+<input type=hidden name=name value=Circle>
+<div class=colors>
+<label>
+<input type=radio name=color value=Red checked>
+<span class=sr-only>Red</span>
+</label>
+<label>
+<input type=radio name=color value=Green>
+<span class=sr-only> Green</span>
+</label>
+<label>
+<input type=radio name=color value=Blue>
+<span class=sr-only> Blue</span>
+</label>
+<label>
+<input type=radio name=color value=Orange>
+<span class=sr-only> Orange</span>
+</label>
+</div>
+<button class=addToCart type=submit>Add to cart</button>
+</form>
 </li>
-<li>
-<a href=#>
-<img src=https://edeal-at-au.github.io/hugo-test-acme/image/products/Line_hu5b9f012b3e97c55c3cea84affda9daf0_102693_5f5cd4bbe999ae4bf40587d2fdc6ba46.png alt=Line>
+<li class=product>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/store/line/>
+<img loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/store/line/cover_hu5b9f012b3e97c55c3cea84affda9daf0_102693_02bfc12eb4c3cd0234051b9a6fd8063f.png alt=Line>
 <h2>Line</h2>
 <div class=price>$ 1 </div>
 <div class=rating>
 &starf;&starf;&starf;&star;&star;
 </div>
 </a>
+<form>
+<input type=hidden name=name value=Line>
+<div class=colors>
+<label>
+<input type=radio name=color value=Yellow checked>
+<span class=sr-only>Yellow</span>
+</label>
+<label>
+<input type=radio name=color value=Blue>
+<span class=sr-only> Blue</span>
+</label>
+</div>
+<button class=addToCart type=submit>Add to cart</button>
+</form>
 </li>
-<li>
-<a href=#>
-<img src=https://edeal-at-au.github.io/hugo-test-acme/image/products/Rectangle_hu1a857c75fe454305c4098487651e5b69_1958842_a094e777078564aa3fad442447c264b8.png alt=Rectangle>
+<li class=product>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/store/rectangle/>
+<img loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/store/rectangle/cover_hu1a857c75fe454305c4098487651e5b69_1958842_54ff120d9ff4e0144d7b795a74fba29a.png alt=Rectangle>
 <h2>Rectangle</h2>
 <div class=price>$ 2.99 </div>
 <div class=rating>
 &starf;&starf;&starf;&starf;&star;
 </div>
 </a>
+<form>
+<input type=hidden name=name value=Rectangle>
+<div class=colors>
+<label>
+<input type=radio name=color value=Red checked>
+<span class=sr-only>Red</span>
+</label>
+</div>
+<button class=addToCart type=submit>Add to cart</button>
+</form>
 </li>
-<li>
-<a href=#>
-<img src=https://edeal-at-au.github.io/hugo-test-acme/image/products/Rhombus_hu72b771461b6ac1eae8f285ab82d5a7d7_160825_659dbc59b7bf650fc16c05809e91bc61.png alt=Rhombus>
+<li class=product>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/store/rhombus/>
+<img loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/store/rhombus/cover_hu72b771461b6ac1eae8f285ab82d5a7d7_160825_aa3068117e29615a79b3719c7cc154b6.png alt=Rhombus>
 <h2>Rhombus</h2>
 <div class=price>$ 3 </div>
 <div class=rating>
 &starf;&starf;&starf;&starf;&starf;
 </div>
 </a>
+<form>
+<input type=hidden name=name value=Rhombus>
+<div class=colors>
+<label>
+<input type=radio name=color value=Green checked>
+<span class=sr-only>Green</span>
+</label>
+</div>
+<button class=addToCart type=submit>Add to cart</button>
+</form>
 </li>
-<li>
-<a href=#>
-<img src=https://edeal-at-au.github.io/hugo-test-acme/image/products/Square_hu35f97a664bcf6577aecc824a58ddd500_75785_cd5406b932ab548f1f3e01b6b8f1dcd9.png alt=Square>
+<li class=product>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/store/square/>
+<img loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/store/square/cover_hu35f97a664bcf6577aecc824a58ddd500_75785_0087361269cf913a0051b41168528bf5.png alt=Square>
 <h2>Square</h2>
 <div class=price>$ 4 </div>
 <div class=rating>
 &starf;&starf;&starf;&starf;&starf;
 </div>
 </a>
+<form>
+<input type=hidden name=name value=Square>
+<div class=colors>
+<label>
+<input type=radio name=color value=Red checked>
+<span class=sr-only>Red</span>
+</label>
+<label>
+<input type=radio name=color value=Pink>
+<span class=sr-only> Pink</span>
+</label>
+<label>
+<input type=radio name=color value=Blue>
+<span class=sr-only> Blue</span>
+</label>
+</div>
+<button class=addToCart type=submit>Add to cart</button>
+</form>
 </li>
 </ul>
 </section>
@@ -162,6 +258,20 @@ News
 <p>We are trending</p>
 </li>
 <li>
+<a href=/hugo-test-acme/editor/>
+<i class=icon-editor></i>
+Editor
+</a>
+<p>Build it your way</p>
+</li>
+<li>
+<a href=/hugo-test-acme/store/>
+<i class=icon-store></i>
+Store
+</a>
+<p>Buy now</p>
+</li>
+<li>
 <a href=/hugo-test-acme/contact>
 <i class=icon-contact></i>
 Contact
@@ -174,8 +284,8 @@ Contact
 <h1>From our blog</h1>
 <ul class=posts>
 <li class=post>
-<a href=https://edeal-at-au.github.io/hugo-test-acme/blog/process-4/>
 <img alt="Our Manufacturing Process Part IV" loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/blog/process-4/cover_hud9949164f33296b940c3365d1d09af90_3836494_1000x0_resize_q75_box.jpg>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/blog/process-4/>
 <h2>
 Our Manufacturing Process Part IV
 </h2>
@@ -187,8 +297,8 @@ The rake face; and The flank. The rake face which directs the flow of newly form
 </a>
 </li>
 <li class=post>
-<a href=https://edeal-at-au.github.io/hugo-test-acme/blog/process-3/>
 <img alt="Our Manufacturing Process Part III" loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/blog/process-3/cover_hu3ce1a9ee9536371ad50b8c5a6f974877_1224306_1000x0_resize_q75_box.jpg>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/blog/process-3/>
 <h2>
 Our Manufacturing Process Part III
 </h2>
@@ -199,8 +309,8 @@ Machining is any process in which a cutting tool is used to remove small chips o
 </a>
 </li>
 <li class=post>
-<a href=https://edeal-at-au.github.io/hugo-test-acme/blog/process-2/>
 <img alt="Our Manufacturing Process Part II" loading=lazy src=https://edeal-at-au.github.io/hugo-test-acme/blog/process-2/cover_hu2ffad51294c12bb5620084491796e85c_272137_1000x0_resize_q75_box.jpg>
+<a href=https://edeal-at-au.github.io/hugo-test-acme/blog/process-2/>
 <h2>
 Our Manufacturing Process Part II
 </h2>
@@ -241,6 +351,14 @@ Turning operations are operations that rotate the workpiece as the primary metho
 <h3>Richter Measures</h3>
 </div>
 </li>
+<li>
+<p><blockquote class=twitter-tweet data-cards=hidden data-dnt=true><p lang=en dir=ltr>Acme Corporation in Hugo In Action sells digital shapes. Its fun...😀</p>&mdash; atishay811 (@atishay811) <a href="https://twitter.com/atishay811/status/1259605801968128000?ref_src=twsrc%5Etfw">May 10, 2020</a></blockquote>
+</p>
+<div>
+<h2>Atishay811</h2>
+<h3>via Twitter</h3>
+</div>
+</li>
 </ol>
 </div>
 </section>
@@ -254,10 +372,10 @@ Turning operations are operations that rotate the workpiece as the primary metho
 <a href=/hugo-test-acme/categories/>Categories</a>
 </li>
 <li>
-<a href=/hugo-test-acme/terms/>Terms of use</a>
+<a href=/hugo-test-acme/terms>Terms of use</a>
 </li>
 <li>
-<a href=/hugo-test-acme/privacy/>Privacy policy</a>
+<a href=/hugo-test-acme/privacy>Privacy policy</a>
 </li>
 <li>
 <a href=/hugo-test-acme/credits/>Credits</a>
