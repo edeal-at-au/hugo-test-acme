@@ -1,6 +1,7 @@
-baseURL: https://hugo-test-acme.pages.dev
+baseURL: https://chapter-12-06.hugoinaction.com
 languageCode: en-us
 title: Acme Corporation
-theme: Eclectic
 enableEmoji: true
 enableGitInfo: true
+Paginate: 3
+theme: github.com/hugoinaction/AcmeTheme
